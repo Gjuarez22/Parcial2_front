@@ -1,0 +1,34 @@
+<div class="mat-elevation-z8">
+    <table mat-table[dataSource]="dataSource" matSort>
+
+
+      <!-- firstName Column -->
+      <ng-container matColumnDef="candidato">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> FirstName </th>
+        <td mat-cell *matCellDef="let row"> {{row.candidato}} </td>
+      </ng-container>
+
+      <!-- lastName Column -->
+      <ng-container matColumnDef="cantidadDeVotos">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> LastName </th>
+        <td mat-cell *matCellDef="let row"> {{row.cantidadDeVotos}} </td>
+      </ng-container>
+
+      <!-- DNI Column -->
+      <ng-container matColumnDef="porcentaje">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> DNI </th>
+        <td mat-cell *matCellDef="let row"> {{row.porcentaje}} </td>
+      </ng-container>
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <!-- Row shown when there is no matching data. -->
+     
+    </table>
+
+   
+  </div>
+  <br>
